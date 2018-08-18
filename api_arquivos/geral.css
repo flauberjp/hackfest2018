@@ -1,0 +1,22 @@
+﻿body {
+    padding-top: 20px;
+}
+p {
+    font-size: 14px;
+}
+.headerDoc {
+    color: #005580;
+}
+span.msg{
+ color: red;
+}
+.tocify-extend-page{
+height: 0px !important; 
+}
+@media (max-width: 767px) {
+    #toc {
+        position: relative;
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+}

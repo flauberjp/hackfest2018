@@ -1,0 +1,2354 @@
+<html ng-app="app" class="ng-scope">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <title>Api Transparência</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="api_arquivos/jquery.css">
+    <link type="text/css" rel="stylesheet" href="api_arquivos/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="api_arquivos/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="api_arquivos/default.css">
+    <link type="text/css" rel="stylesheet" href="api_arquivos/geral.css">
+    <link rel="stylesheet" href="api_arquivos/prompt.css">
+    <script src="api_arquivos/prompt.js"></script>
+    <script src="api_arquivos/prompt.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid ng-scope" ng-controller="PrincipalCtrl">
+        <div class="row-fluid" style="max-height: 50px">
+            <div class="span3">
+                <div ng-click="clickToc()" id="toc" style="overflow:hidden; box-shadow: 6px 6px 3px #888888;" class="tocify">
+
+                    <ul id="tocify-header0" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="API">
+                            <a>API</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="display: none;">
+                            <li class="tocify-item" data-unique="Erros">
+                                <a>Erros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="InformaçõesAdicionais" style="cursor: pointer;">
+                                <a>Informações Adicionais</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header1" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Clientes" style="cursor: pointer;">
+                            <a>Folha de Pagamento</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header2" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Contratos" style="cursor: pointer;">
+                            <a>Contratos</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros7">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados8">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header3" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Receitas" style="cursor: pointer;">
+                            <a>Receitas</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="display: none;">
+                            <li class="tocify-item" data-unique="Parâmetros10">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados11">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header4" class="tocify-header nav nav-list">
+                        <li class="tocify-item active" data-unique="Servidores" style="cursor: pointer;">
+                            <a>Servidores</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="display: block;">
+                            <li class="tocify-item" data-unique="Parâmetros13" style="cursor: pointer;">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados14" style="cursor: pointer;">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header5" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Despesas" style="cursor: pointer;">
+                            <a>Despesas</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="display: none;">
+                            <li class="tocify-item" data-unique="Parâmetros16">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados17">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header6" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Empenhos" style="cursor: pointer;">
+                            <a>Empenhos</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros19">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados20">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header7" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Liquidações" style="cursor: pointer;">
+                            <a>Liquidações</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros22">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados23">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header8" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Pagamentos" style="cursor: pointer;">
+                            <a>Pagamentos</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="display: none;">
+                            <li class="tocify-item" data-unique="Parâmetros25" style="cursor: pointer;">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados26" style="cursor: pointer;">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header9" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="ExtraOrçamentária">
+                            <a>Extra Orçamentária</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros28">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados29">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header10" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="RestosaPagar">
+                            <a>Restos a Pagar</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros31">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados32">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul id="tocify-header11" class="tocify-header nav nav-list">
+                        <li class="tocify-item" data-unique="Licitações">
+                            <a>Licitações</a>
+                        </li>
+                        <ul class="tocify-subheader nav nav-list" data-tag="3" style="">
+                            <li class="tocify-item" data-unique="Parâmetros34">
+                                <a>Parâmetros</a>
+                            </li>
+                            <li class="tocify-item" data-unique="Retornodosdados35">
+                                <a>Retorno dos dados</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="span9">
+                <div name="API" data-unique="API"></div>
+                <h2>API</h2>
+                <div class="github-widget" data-repo="gfranko/jquery.tocify.js"></div>
+                <b>IdCliente:</b>
+                <span ng-bind="idCliente" class="ng-binding">210</span>
+                <b>Cliente:</b>
+                <span ng-bind="nomeCliente" class="ng-binding">Demonstração</span>
+                <br>
+                <br> A API disponibiliza dados relativos à transparência na gestão pública, conforme exigência da Lei 12.527
+                de 18 de novembro de 2011, Art. 8º, §3º, Incisos III e IV. Os dados são disponibilizados nos formatos XML
+                e JSON, conforme abaixo:
+                <br>
+                <br>
+                <table class="table table-striped table-bordered table-condensed  ">
+                    <tbody>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Url</th>
+                        </tr>
+                        <!-- ngIf: todos -->
+                        <tr ng-if="todos" class="ng-scope">
+                            <td>Clientes</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/clientes?type=json"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/clientes</a>
+                            </td>
+                        </tr>
+                        <!-- end ngIf: todos -->
+                        <tr>
+                            <td>Contratos</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/contratos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/contratos</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Receitas</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/receitas?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/receitas</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Servidores</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/servidores?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtcompetencia=01/2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/servidores</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Despesas</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/despesas?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/despesas</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Empenhos</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/empenhos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/empenhos</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Liquidações</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/liquidacoes?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/liquidacoes</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pagamentos</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/pagamentos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/pagamentos</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Extra Orçamentárias</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/extraorcamentarias?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/extraorcamentarias</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Restos a Pagar</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/restos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2017"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/restos</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Licitações</td>
+                            <td>
+                                <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/licitacoes?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100"
+                                    class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/licitacoes</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                Em todas as chamadas da API estão presentes os seguintes filtros:
+                <br>
+                <br>
+                <table class="table table-striped table-bordered table-condensed  ">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>idCliente(obrigatório)</td>
+                            <td>inteiro</td>
+                            <td>Código de Identificação do Cliente. </td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td>string</td>
+                            <td>json ou xml. Tipo de Retorno dos dados. Caso o valor não seja passado ou esteja incorreto o tipo
+                                xml será adotado como padrão. </td>
+                        </tr>
+                        <tr>
+                            <td>page</td>
+                            <td>inteiro</td>
+                            <td>página atual.Iniciando em 1.</td>
+                        </tr>
+                        <tr>
+                            <td>pagesize</td>
+                            <td>inteiro</td>
+                            <td>quantidade de registros retornados na páginas (Mínimo 1 ,Máximo 100).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Abaixo vemos um exemplo de como os filtros são passados na URL de todos os serviço:</p>
+                <p>
+                    ?
+                    <span style="color:#ffbb00;font-weight:bold">type={json|xml}</span>&amp;
+                    <span style="color:#7cbb00;font-weight:bold">idCliente={Id do Cliente}</span>&amp;
+                    <span style="color:#00a1f1;font-weight:bold">page={Página Atual}</span>&amp;
+                    <span style="color:#f65314;font-weight:bold">pageSize={Tamanho da Página}</span>
+                </p>
+
+                <div name="Erros" data-unique="Erros"></div>
+                <h3>Erros</h3>
+
+                <p>Caso algum filtro esteja com o nome incorreto, ou com valores inválidos, o usuário verá uma mensagem de aviso
+                    sobre o que está fora do padrão, essas mensagens são:</p>
+
+                <table class="table table-striped table-bordered table-condensed  ">
+                    <tbody>
+                        <tr>
+                            <th>Situação</th>
+                            <th>Mensagem</th>
+                        </tr>
+                        <tr>
+                            <td>Id Cliente vazio</td>
+                            <td>
+                                <span class="msg"> "Erro: Campo(s) obrigatório(s): Id do Cliente (idCliente)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Id Cliente válido, mas não configurado</td>
+                            <td>
+                                <span class="msg">"Erro: Cliente não configurado (idCliente)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Id Cliente inválido (Letra, Números negativos, etc.)</td>
+                            <td>
+                                <span class="msg">"Erro: Cliente inválido (idCliente)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Página vazia</td>
+                            <td>
+                                <span class="msg">"Erro: Campo(s) obrigatório(s): Página (page)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Página não existe</td>
+                            <td>
+                                <span class="msg"> "Erro: Página inválida (page). Valor mínimo: 1".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Página inválida (Letra, Números negativos, etc.)</td>
+                            <td>
+                                <span class="msg"> "Erro: Página inválida (page). Valor mínimo: 1".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tamanho da página vazia</td>
+                            <td>
+                                <span class="msg"> "Erro: Campo(s) obrigatório(s): Tamanho Página (pageSize)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tamanho da página inválida (Letra, Números negativos, etc.)</td>
+                            <td>
+                                <span class="msg"> "Erro: Paginação inválida (pageSize).
+                                    <br> Valor mínimo: 1 Registro - Valor máximo: 100 Registros".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ano não informado</td>
+                            <td>
+                                <span class="msg"> "Erro: Campo(s) obrigatório(s): Ano (numAno)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ano inválido</td>
+                            <td>
+                                <span class="msg"> "Erro: Ano inválido (numAno)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Datas não informadas</td>
+                            <td>
+                                <span class="msg"> "Erro: Campo(s) obrigatório(s): Data Início (dtInicio), Data Fim (dtFim)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Inicial não informada</td>
+                            <td>
+                                <span class="msg"> "Erro: Campo(s) obrigatório(s): Data Início (dtInicio)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Final não informada</td>
+                            <td>
+                                <span class="msg"> "Erro: Campo(s) obrigatório(s): Data Fim (dtFim)".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Filtro inválido (Letra, Números negativos, etc.)</td>
+                            <td>
+                                <span class="msg"> "Dados não encontrados".</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E por fim se algum erro de natureza desconhecida ocorrer será exibido</td>
+                            <td>
+                                <span class="msg"> "Erro: Contate o Administrador do Sistema."</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="InformaçõesAdicionais" data-unique="InformaçõesAdicionais"></div>
+                <h3>Informações Adicionais</h3>
+                <p>Para fins informativos são retornados no cabeçalho da requisição algumas informações</p>
+                <table class="table table-striped table-bordered table-condensed  ">
+                    <tbody>
+                        <tr>
+                            <th>Informação</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>X-Page-Index</td>
+                            <td>Página atual</td>
+                        </tr>
+                        <tr>
+                            <td>X-Page-Size</td>
+                            <td>Tamanho da página</td>
+                        </tr>
+                        <tr>
+                            <td>X-Total-Count</td>
+                            <td>Quantidade de registros retornados em cada requisição</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ngIf: todos -->
+                <div name="Clientes" data-unique="Clientes"></div>
+                <h2 ng-if="todos" class="ng-scope">Clientes</h2>
+                <!-- end ngIf: todos -->
+                <!-- ngIf: todos -->
+                <p ng-if="todos" class="ng-scope">Exemplo:</p>
+                <!-- end ngIf: todos -->
+                <!-- ngIf: todos -->
+                <p ng-if="todos" class="ng-scope">
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/clientes?type=json"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/clientes?type=json</a>
+                </p>
+                <!-- end ngIf: todos -->
+                <!-- ngIf: todos -->
+                <div name="Parâmetros" data-unique="Parâmetros"></div>
+                <h3 ng-if="todos" class="ng-scope">Parâmetros</h3>
+                <!-- end ngIf: todos -->
+                <!-- ngIf: todos -->
+                <div name="Retornodosdados" data-unique="Retornodosdados"></div>
+                <h3 ng-if="todos" class="ng-scope">Retorno dos dados</h3>
+                <!-- end ngIf: todos -->
+                <!-- ngIf: todos -->
+                <div ng-if="todos" class="ng-scope">
+                    <p>Após acessarmos temos o retorno dos dados dos clientes disponíveis que são:</p>
+                    <table class="table table-striped table-bordered table-condensed">
+                        <tbody>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                            </tr>
+                            <tr>
+                                <td>IdCliente</td>
+                                <td>Id do Cliente disponível</td>
+                            </tr>
+                            <tr>
+                                <td>DescCliente</td>
+                                <td>Nome do Cliente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    Obs.: Dados inexistentes aparecem como vazio ou 0.
+                    <br>
+                    <br> Exemplo dos dados em:
+                    <br>
+                    <br>
+                    <span class="note">
+                        <strong>XML</strong>
+                    </span>
+                    <pre>                    <code class="xml hljs">  
+                <span class="hljs-tag">&lt;<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">idcliente</span>&gt;</span>210<span class="hljs-tag">&lt;/<span class="hljs-title">idcliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">desccliente</span>&gt;</span>PortalFacil_Demo<span class="hljs-tag">&lt;/<span class="hljs-title">desccliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">idcliente</span>&gt;</span>220<span class="hljs-tag">&lt;/<span class="hljs-title">idcliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">desccliente</span>&gt;</span>PortalFacil_Ilheus<span class="hljs-tag">&lt;/<span class="hljs-title">desccliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">idcliente</span>&gt;</span>205<span class="hljs-tag">&lt;/<span class="hljs-title">idcliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">desccliente</span>&gt;</span>PortalFacil_CamTaubateNew<span class="hljs-tag">&lt;/<span class="hljs-title">desccliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">cliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">idcliente</span>&gt;</span>178<span class="hljs-tag">&lt;/<span class="hljs-title">idcliente</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">desccliente</span>&gt;</span>PortalFacil_Uba<span class="hljs-tag">&lt;/<span class="hljs-title">desccliente</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">cliente</span>&gt;</span>
+              </code>
+             </pre>
+                    <br>
+                    <span class="note">
+                        <strong>JSON</strong>
+                    </span>
+                    <pre>                    <code class="json hljs">
+                [  
+                    {  
+                       "<span class="hljs-attribute">IdCliente</span>":<span class="hljs-value"><span class="hljs-string">"210"</span></span>,
+                       "<span class="hljs-attribute">DescCliente</span>":<span class="hljs-value"><span class="hljs-string">"PortalFacil_Demo"</span>
+                    </span>},
+                    {  
+                       "<span class="hljs-attribute">IdCliente</span>":<span class="hljs-value"><span class="hljs-string">"220"</span></span>,
+                       "<span class="hljs-attribute">DescCliente</span>":<span class="hljs-value"><span class="hljs-string">"PortalFacil_Ilheus"</span>
+                    </span>},
+                    {  
+                       "<span class="hljs-attribute">IdCliente</span>":<span class="hljs-value"><span class="hljs-string">"205"</span></span>,
+                       "<span class="hljs-attribute">DescCliente</span>":<span class="hljs-value"><span class="hljs-string">"PortalFacil_CamTaubateNew"</span>
+                    </span>},
+                    {  
+                       "<span class="hljs-attribute">IdCliente</span>":<span class="hljs-value"><span class="hljs-string">"178"</span></span>,
+                       "<span class="hljs-attribute">DescCliente</span>":<span class="hljs-value"><span class="hljs-string">"PortalFacil_Uba"</span>
+                    </span>}
+                ]
+             </code>
+             </pre>
+                    <br>
+                </div>
+                <!-- end ngIf: todos -->
+
+                <div name="Contratos" data-unique="Contratos"></div>
+                <h2>Folha de Pagamento</h2>
+                <p>Exemplos:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://5b772f043ce04b00146a53ce.mockapi.io/api/FolhaDePagamento"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">
+                        http://5b772f043ce04b00146a53ce.mockapi.io/api/FolhaDePagamento</a>
+                </p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://5b772f043ce04b00146a53ce.mockapi.io/api/FolhaDePagamento"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">
+                        http://5b772f043ce04b00146a53ce.mockapi.io/api/FolhaDePagamento?nome=ABEL%20CAVALCANTE%20DE%20SOUZA%20FILHO</a>
+                </p>
+                <div name="Parâmetros7" data-unique="Parâmetros7"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em "Folha de Pagamento" temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>Nome</td>
+                            <td>string</td>
+                            <td>Nome do Servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>cpf</td>
+                            <td>string</td>
+                            <td>CPF do Servidor. CPF válido sem máscara.</td>
+                        </tr>
+                        <tr>
+                            <td>Cargo</td>
+                            <td>string</td>
+                            <td class="ng-binding">
+                                Cargo do Servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>Secretaria</td>
+                            <td>string</td>
+                            <td class="ng-binding">Secretaria onde o servidor trabalha. 
+                            Exemplo: Diretoria Geral, Parlamentar, Mesaa Diretora, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Regime</td>
+                            <td>string</td>
+                            <td>Regime de contratação, exemplo: Estatutário, Cargo Comissionado.</td>
+                        </tr>
+                        <tr>
+                            <td>Data de Admissão</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data inicial equivalente ao 
+                                período da data do contrato. Formato (01/01/2018).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados8" data-unique="Retornodosdados8"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados dos contratos que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>nome</td>
+                            <td>string</td>
+                            <td>Nome do Servidor.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>cpf</td>
+                            <td>string</td>
+                            <td>CPF do Servidor. CPF válido sem máscara.</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>cargo</td>
+                            <td>string</td>
+                            <td class="ng-binding">
+                                Cargo do Servidor.</td>
+                                <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>secretaria</td>
+                            <td>string</td>
+                            <td class="ng-binding">Secretaria onde o servidor trabalha. 
+                            Exemplo: Diretoria Geral, Parlamentar, Mesaa Diretora, etc.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>regime</td>
+                            <td>string</td>
+                            <td>Regime de contratação, exemplo: Estatutário, Cargo Comissionado.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>dataDeAdmissao</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data inicial equivalente ao período da data do contrato. Formato (01/01/2018).</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>salarioBruto</td>
+                            <td>decimal</td>
+                            <td>Salário Bruto.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>descontos</td>
+                            <td>decimal</td>
+                            <td>Descontos do Salário Bruto.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>salarioLiquido</td>
+                            <td>decimal</td>
+                            <td>Salário Líquido, o bruto menos os descontos.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-string">"1"</span></span>,
+	"<span class="hljs-attribute">nome</span>":<span class="hljs-value"><span class="hljs-string">"ABEL CAVALCANTE DE SOUZA FILHO"</span></span>,
+	"<span class="hljs-attribute">cpf</span>":<span class="hljs-value"><span class="hljs-string">"490.647.014-90"</span></span>,
+	"<span class="hljs-attribute">cargo</span>":<span class="hljs-value"><span class="hljs-string">"ASSESSOR PARLAMENTAR GABINETE VEREADOR - AP-GV"</span></span>,
+	"<span class="hljs-attribute">secretaria</span>":<span class="hljs-value"><span class="hljs-string">"PARLAMENTAR"</span></span>,
+	"<span class="hljs-attribute">regime</span>":<span class="hljs-value"><span class="hljs-string">"CARGO COMISSIONADO"</span></span>,
+	"<span class="hljs-attribute">dataDeAdmissao</span>":<span class="hljs-value"><span class="hljs-string">"01/05/2018"</span></span>,
+	"<span class="hljs-attribute">salarioBruto</span>":<span class="hljs-value"><span class="hljs-string">"R$ 5.000,00"</span></span>,
+	"<span class="hljs-attribute">descontos</span>":<span class="hljs-value"><span class="hljs-string">"R$ 829,80"</span></span>,
+	"<span class="hljs-attribute">salarioLiquido</span>":<span class="hljs-value"><span class="hljs-string">"R$ 4.170,20"</span></span>
+}
+                </code>
+             </pre>
+                <br>
+                <div name="Receitas" data-unique="Receitas"></div>
+                <h2>Receitas</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/receitas?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/receitas?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2018</a>
+                </p>
+                <div name="Parâmetros10" data-unique="Parâmetros10"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Receitas temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>numAno(obrigatório)</td>
+                            <td>inteiro</td>
+                            <td>Ano da receita.</td>
+                        </tr>
+                        <tr>
+                            <td>numReceita</td>
+                            <td>string</td>
+                            <td>Número da receita.</td>
+                        </tr>
+                        <tr>
+                            <td>descReceita</td>
+                            <td>string</td>
+                            <td>Descrição da receita.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados11" data-unique="Retornodosdados11"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das receitas que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>DescReceita</td>
+                            <td>string</td>
+                            <td>Descrição da Receita.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumExercicio</td>
+                            <td>inteiro</td>
+                            <td>Número(ano) do exercício</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>NumReceita</td>
+                            <td>string</td>
+                            <td>Número da Receita.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>VlPrevisto</td>
+                            <td>decimal</td>
+                            <td>Valor previsto.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlRealizado</td>
+                            <td>decimal</td>
+                            <td>Valor realizado.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">Receita</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumExercicio</span>&gt;</span>2018<span class="hljs-tag">&lt;/<span class="hljs-title">NumExercicio</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumReceita</span>&gt;</span>1.0.0.0.00.00.00<span class="hljs-tag">&lt;/<span class="hljs-title">NumReceita</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescReceita</span>&gt;</span>Receitas Correntes<span class="hljs-tag">&lt;/<span class="hljs-title">DescReceita</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlPrevisto</span>&gt;</span>227106050.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlPrevisto</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlRealizado</span>&gt;</span>111449189.34<span class="hljs-tag">&lt;/<span class="hljs-title">VlRealizado</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Receita</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">NumExercicio</span>":<span class="hljs-value"><span class="hljs-string">"2018"</span></span>,
+	"<span class="hljs-attribute">NumReceita</span>":<span class="hljs-value"><span class="hljs-string">"1.0.0.0.00.00.00"</span></span>,
+	"<span class="hljs-attribute">DescReceita</span>":<span class="hljs-value"><span class="hljs-string">"Receitas Correntes"</span></span>,
+	"<span class="hljs-attribute">VlPrevisto</span>":<span class="hljs-value"><span class="hljs-string">"227106050.00"</span></span>,
+	"<span class="hljs-attribute">VlRealizado</span>":<span class="hljs-value"><span class="hljs-string">"111449189.34"</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+                <div name="Servidores" data-unique="Servidores"></div>
+                <h2>Servidores</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/servidores?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtcompetencia=01/2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/servidores?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtcompetencia=01/2018</a>
+                </p>
+                <div name="Parâmetros13" data-unique="Parâmetros13"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Servidores temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>dtCompetencia(obrigatório)</td>
+                            <td>data</td>
+                            <td>Data de Competência do servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>descNome</td>
+                            <td>string</td>
+                            <td>Nome do Servidor.</td>
+                        </tr>
+                        <tr>
+                            <td>descCargoFuncao</td>
+                            <td>string</td>
+                            <td>Descrição do Cargo/Função.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados14" data-unique="Retornodosdados14"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das servidores que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>DescCargo</td>
+                            <td>string</td>
+                            <td>Descrição do cargo do servidor.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescFuncao</td>
+                            <td>string</td>
+                            <td>Descrição da função do servidor</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescServidor</td>
+                            <td>string</td>
+                            <td>Nome do servidor.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DtCompetencia</td>
+                            <td>string</td>
+                            <td>Data da competência.</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>NumMatricula</td>
+                            <td>inteiro</td>
+                            <td>Número da matricula do servidor.</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>VlBase</td>
+                            <td>decimal</td>
+                            <td>Valor da base salarial do servidor.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlDesconto</td>
+                            <td>decimal</td>
+                            <td>Valor de desconto salarial do servidor.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlLiquido</td>
+                            <td>decimal</td>
+                            <td>Valor líquido do salário do servidor.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlProvento</td>
+                            <td>decimal</td>
+                            <td>Valor de proventos do servidor.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">Servidor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumMatricula</span>&gt;</span>5659<span class="hljs-tag">&lt;/<span class="hljs-title">NumMatricula</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescServidor</span>&gt;</span>ABEL JOÂO PEDRO<span class="hljs-tag">&lt;/<span class="hljs-title">DescServidor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescUnidade</span>&gt;</span>FUNDO MUNICIPAL DE SAUDE<span class="hljs-tag">&lt;<span class="hljs-title">DescUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescCargo</span>&gt;</span>TECNICO DE NIVEL SUPERIOR I<span class="hljs-tag">&lt;/<span class="hljs-title">DescCargo</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescFuncao</span>&gt;</span>TECNICO DE NIVEL SUPERIOR I<span class="hljs-tag">&lt;/<span class="hljs-title">DescFuncao</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DtCompetencia</span>&gt;</span>01/2018<span class="hljs-tag">&lt;/<span class="hljs-title">DtCompetencia</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlBase</span>&gt;</span>3378.68<span class="hljs-tag">&lt;/<span class="hljs-title">VlBase</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlProvento</span>&gt;</span>3878.68<span class="hljs-tag">&lt;/<span class="hljs-title">VlProvento</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlDesconto</span>&gt;</span>2348.56<span class="hljs-tag">&lt;/<span class="hljs-title">VlDesconto</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlLiquido</span>&gt;</span>1530.12<span class="hljs-tag">&lt;/<span class="hljs-title">VlLiquido</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Servidor</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">NumMatricula</span>":<span class="hljs-value"><span class="hljs-string">"5659"</span></span>,
+	"<span class="hljs-attribute">DescServidor</span>":<span class="hljs-value"><span class="hljs-string">"ABEL JOÂO PEDRO"</span></span>,
+	"<span class="hljs-attribute">DescUnidade</span>":<span class="hljs-value"><span class="hljs-string">"FUNDO MUNICIPAL DE SAUDE"</span></span>,
+	"<span class="hljs-attribute">DescCargo</span>":<span class="hljs-value"><span class="hljs-string">"TECNICO DE NIVEL SUPERIOR I"</span></span>,
+	"<span class="hljs-attribute">DescFuncao</span>":<span class="hljs-value"><span class="hljs-string">"TECNICO DE NIVEL SUPERIOR I"</span></span>,
+	"<span class="hljs-attribute">DtCompetencia</span>":<span class="hljs-value"><span class="hljs-string">"01/2018"</span></span>,
+	"<span class="hljs-attribute">VlBase</span>":<span class="hljs-value"><span class="hljs-string">"3378.68"</span></span>,
+	"<span class="hljs-attribute">VlProvento</span>":<span class="hljs-value"><span class="hljs-string">"3878.68"</span></span>,
+	"<span class="hljs-attribute">VlDesconto</span>":<span class="hljs-value"><span class="hljs-string">"2348.56"</span></span>,
+	"<span class="hljs-attribute">VlLiquido</span>":<span class="hljs-value"><span class="hljs-string">"1530.12"</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+                <div name="Despesas" data-unique="Despesas"></div>
+                <h2>Despesas</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/despesas?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/despesas?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2018</a>
+                </p>
+                <div name="Parâmetros16" data-unique="Parâmetros16"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Despesas temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>numAno(obrigatório)</td>
+                            <td>inteiro</td>
+                            <td>Ano da despesa.</td>
+                        </tr>
+                        <tr>
+                            <td>numDespesa</td>
+                            <td>string</td>
+                            <td>Número da despesa.</td>
+                        </tr>
+                        <tr>
+                            <td>descDespesa</td>
+                            <td>string</td>
+                            <td>Descrição da despesa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados17" data-unique="Retornodosdados17"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das despesas que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumExercicio</td>
+                            <td>inteiro</td>
+                            <td>Número(ano) do exercício.</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>NumDespesa</td>
+                            <td>string</td>
+                            <td>Número da Despesa.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescDespesa</td>
+                            <td>string</td>
+                            <td>Descrição da Despesa.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>VlEmpenhado</td>
+                            <td>decimal</td>
+                            <td>Valor empenhado.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlLiquidado</td>
+                            <td>decimal</td>
+                            <td>Valor liquidado.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlPago</td>
+                            <td>decimal</td>
+                            <td>Valor pago.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">Despesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumExercicio</span>&gt;</span>2018<span class="hljs-tag">&lt;/<span class="hljs-title">NumExercicio</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumDespesa</span>&gt;</span>3.0.00.00.00<span class="hljs-tag">&lt;/<span class="hljs-title">NumDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescDespesa</span>&gt;</span>Despesas Correntes<span class="hljs-tag">&lt;/<span class="hljs-title">DescDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlEmpenhado</span>&gt;</span>257662296.18<span class="hljs-tag">&lt;/<span class="hljs-title">VlEmpenhado</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlLiquidado</span>&gt;</span>207257173.03<span class="hljs-tag">&lt;/<span class="hljs-title">VlLiquidado</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlPago</span>&gt;</span>102835257.67<span class="hljs-tag">&lt;/<span class="hljs-title">VlPago</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Despesa</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">NumExercicio</span>":<span class="hljs-value"><span class="hljs-string">"2018"</span></span>,
+	"<span class="hljs-attribute">NumDespesa</span>":<span class="hljs-value"><span class="hljs-string">"3.0.00.00.00"</span></span>,
+	"<span class="hljs-attribute">DescDespesa</span>":<span class="hljs-value"><span class="hljs-string">"Despesas Correntes"</span></span>,
+	"<span class="hljs-attribute">VlEmpenhado</span>":<span class="hljs-value"><span class="hljs-string">"257662296.18"</span></span>,
+	"<span class="hljs-attribute">VlLiquidado</span>":<span class="hljs-value"><span class="hljs-string">"207257173.03"</span></span>,
+	"<span class="hljs-attribute">VlPago</span>":<span class="hljs-value"><span class="hljs-string">"102835257.67"</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+                <div name="Empenhos" data-unique="Empenhos"></div>
+                <h2>Empenhos</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/empenhos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/empenhos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018</a>
+                </p>
+                <div name="Parâmetros19" data-unique="Parâmetros19"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Empenhos temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>dtInicio(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data inicial para filtrar o período do empenho. Formato (01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>dtFim(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data final para filtrar o período do empenho. Formato (01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>numEmpenho</td>
+                            <td>string</td>
+                            <td>Número do empenho.</td>
+                        </tr>
+                        <tr>
+                            <td>descFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do fornecedor.</td>
+                        </tr>
+                        <tr>
+                            <td>descUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                        </tr>
+                        <tr>
+                            <td>tpEmpenho</td>
+                            <td>string</td>
+                            <td>Tipo do empenho.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados20" data-unique="Retornodosdados20"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das empenhos que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>TpEmpenho</td>
+                            <td>string</td>
+                            <td>Tipo do Empenho.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DtEmpenho</td>
+                            <td>data</td>
+                            <td>Data do Empenho.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>VlEmpenho</td>
+                            <td>decimal</td>
+                            <td>Valor do Empenho.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>NumDespesa</td>
+                            <td>string</td>
+                            <td>Número da despesa.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescDespesa</td>
+                            <td>string</td>
+                            <td>Nome da despesa.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumCpfCnpjFornecedor</td>
+                            <td>string</td>
+                            <td>Número do documento do fornecedor.
+                                <br> Formatos: CPF (999.999.999-99), CNPJ (99.999.999/9999-99).</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumUnidade</td>
+                            <td>inteiro</td>
+                            <td>Número da unidade.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescUnidade</td>
+                            <td>string</td>
+                            <td>Nome da unidade.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumLicitacao</td>
+                            <td>inteiro</td>
+                            <td>Número da Licitação.</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>TpLicitacao</td>
+                            <td>string</td>
+                            <td>Tipo da Licitação.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DtLicitacao</td>
+                            <td>string</td>
+                            <td>Ano da Licitação.</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>NumProcesso</td>
+                            <td>string</td>
+                            <td>Número do Processo.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumFuncao</td>
+                            <td>string</td>
+                            <td>Número da Função.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescFuncao</td>
+                            <td>string</td>
+                            <td>Descrição da Função.</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>NumSubFuncao</td>
+                            <td>string</td>
+                            <td>Número da SubFunção.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescSubFuncao</td>
+                            <td>string</td>
+                            <td>Descrição da SubFunção.</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>NumPrograma</td>
+                            <td>string</td>
+                            <td>Número do Programa.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescPrograma</td>
+                            <td>string</td>
+                            <td>Descrição do Programa.</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>NumDestinacao</td>
+                            <td>string</td>
+                            <td>Número da Destinação.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescDestinacao</td>
+                            <td>string</td>
+                            <td>Descrição da Destinação.</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>DescEmpenho</td>
+                            <td>string</td>
+                            <td>Descrição do Empenho.</td>
+                            <td>8000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                    <code class="xml ng-binding hljs">
+                        <span class="hljs-tag">&lt;<span class="hljs-title">Empenho</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumEmpenho</span>&gt;</span>01273<span class="hljs-tag">&lt;/<span class="hljs-title">NumEmpenho</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">TpEmpenho</span>&gt;</span>ORDINÁRIO<span class="hljs-tag">&lt;/<span class="hljs-title">TpEmpenho</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DtEmpenho</span>&gt;</span>29/01/2018<span class="hljs-tag">&lt;/<span class="hljs-title">DtEmpenho</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">VlEmpenho</span>&gt;</span>19131.43<span class="hljs-tag">&lt;/<span class="hljs-title">VlEmpenho</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumDespesa</span>&gt;</span>3.1.90.01.02<span class="hljs-tag">&lt;/<span class="hljs-title">NumDespesa</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescDespesa</span>&gt;</span>
+                        Aposentadorias Custeadas com Recursos Ordinários do Tesouro
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">DescDespesa</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>18.128.207/0001-01<span class="hljs-tag">&lt;/<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescFornecedor</span>&gt;</span>PREFEITURA MUNICIPAL DE UBA<span class="hljs-tag">&lt;/<span class="hljs-title">DescFornecedor</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumUnidade</span>&gt;</span>02002003<span class="hljs-tag">&lt;/<span class="hljs-title">NumUnidade</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescUnidade</span>&gt;</span>DIVISAO DE GESTAO DE PESSOAS<span class="hljs-tag">&lt;/<span class="hljs-title">DescUnidade</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumLicitacao</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-title">NumLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">TpLicitacao</span>&gt;</span>Pregão<span class="hljs-tag">&lt;/<span class="hljs-title">TpLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DtLicitacao</span>&gt;</span>2018<span class="hljs-tag">&lt;/<span class="hljs-title">DtLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumProcesso</span>&gt;</span>10202018<span class="hljs-tag">&lt;/<span class="hljs-title">NumProcesso</span>&gt;</span> 
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumFuncao</span>&gt;</span>04<span class="hljs-tag">&lt;/<span class="hljs-title">NumFuncao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescFuncao</span>&gt;</span>ADMINISTRACAO<span class="hljs-tag">&lt;/<span class="hljs-title">DescFuncao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumSubFuncao</span>&gt;</span>122<span class="hljs-tag">&lt;/<span class="hljs-title">NumSubFuncao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescSubFuncao</span>&gt;</span>ADMINISTRACAO GERAL<span class="hljs-tag">&lt;/<span class="hljs-title">DescSubFuncao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumPrograma</span>&gt;</span>0001<span class="hljs-tag">&lt;/<span class="hljs-title">NumPrograma</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescPrograma</span>&gt;</span>APOIO ADMINSTRATIVO<span class="hljs-tag">&lt;/<span class="hljs-title">DescPrograma</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumDestinacao</span>&gt;</span>100<span class="hljs-tag">&lt;/<span class="hljs-title">NumDestinacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescDestinacao</span>&gt;</span>RECURSOS ORDINARIOS<span class="hljs-tag">&lt;/<span class="hljs-title">DescDestinacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescEmpenho</span>&gt;</span>
+                        DESP.VIAGEM NOS TERMOS DA LEI 5264/11 E DECRETO 7253 DE 01/04/13, COMPREENDENDO REFEICOES E OUTROS QUANDO EM IDA A DIVERSAS CIDADES A SERVICO DO GABINETE DO PREFEITO, NO EXERCICIO DE 2018. CARGO: AUDITOR DO CONTROLE INTERNO.
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">DescEmpenho</span>&gt;</span> 
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">Empenho</span>&gt;</span>
+                    </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                    <code class="json ng-binding hljs">
+                        {
+                        "<span class="hljs-attribute">NumEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"01273"</span></span>,
+                        "<span class="hljs-attribute">TpEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"ORDINÁRIO"</span></span>,
+                        "<span class="hljs-attribute">DtEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"29/01/2018"</span></span>,
+                        "<span class="hljs-attribute">VlEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"19131.43"</span></span>,
+                        "<span class="hljs-attribute">NumDespesa</span>":<span class="hljs-value"><span class="hljs-string">"3.1.90.01.02"</span></span>,
+                        "<span class="hljs-attribute">DescDespesa</span>":<span class="hljs-value"><span class="hljs-string">"Aposentadorias Custeadas com Recursos Ordinários do Tesouro"</span></span>,
+                        "<span class="hljs-attribute">NumCpfCnpjFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"18.128.207/0001-01"</span></span>,
+                        "<span class="hljs-attribute">DescFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"PREFEITURA MUNICIPAL DE UBA"</span></span>,
+                        "<span class="hljs-attribute">NumUnidade</span>":<span class="hljs-value"><span class="hljs-string">"02002003"</span></span>,
+                        "<span class="hljs-attribute">DescUnidade</span>":<span class="hljs-value"><span class="hljs-string">"DIVISAO DE GESTAO DE PESSOAS"</span></span>,
+                        "<span class="hljs-attribute">NumLicitacao</span>":<span class="hljs-value"><span class="hljs-string">"10"</span></span>,
+                        "<span class="hljs-attribute">TpLicitacao</span>":<span class="hljs-value"><span class="hljs-string">"Pregão"</span></span>,
+                        "<span class="hljs-attribute">DtLicitacao</span>":<span class="hljs-value"><span class="hljs-string">"2018"</span></span>,
+                        "<span class="hljs-attribute">NumProcesso</span>":<span class="hljs-value"><span class="hljs-string">"10202018"</span></span>,
+                        "<span class="hljs-attribute">NumFuncao</span>":<span class="hljs-value"><span class="hljs-string">"04"</span></span>,
+                        "<span class="hljs-attribute">DescFuncao</span>":<span class="hljs-value"><span class="hljs-string">"ADMINISTRACAO"</span></span>,
+                        "<span class="hljs-attribute">NumSubFuncao</span>":<span class="hljs-value"><span class="hljs-string">"122"</span></span>,
+                        "<span class="hljs-attribute">DescSubFuncao</span>":<span class="hljs-value"><span class="hljs-string">"ADMINISTRACAO GERAL"</span></span>,
+                        "<span class="hljs-attribute">NumPrograma</span>":<span class="hljs-value"><span class="hljs-string">"0001"</span></span>,
+                        "<span class="hljs-attribute">DescPrograma</span>":<span class="hljs-value"><span class="hljs-string">"APOIO ADMINSTRATIVO"</span></span>,
+                        "<span class="hljs-attribute">NumDestinacao</span>":<span class="hljs-value"><span class="hljs-string">"100"</span></span>,
+                        "<span class="hljs-attribute">DescDestinacao</span>":<span class="hljs-value"><span class="hljs-string">"RECURSOS ORDINARIOS"</span></span>,
+                        "<span class="hljs-attribute">DescEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"DESP.VIAGEM  NOS  TERMOS  DA LEI 5264/11 E DECRETO 7253 DE 01/04/13, COMPREENDENDO REFEICOES E OUTROS QUANDO  EM  IDA  A  DIVERSAS  CIDADES A SERVICO DO GABINETE DO PREFEITO, NO EXERCICIO DE 2018. CARGO: AUDITOR DO CONTROLE INTERNO."</span>
+                        </span>}
+                    </code>
+             </pre>
+                <br>
+                <div name="Liquidações" data-unique="Liquidações"></div>
+                <h2>Liquidações</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/liquidacoes?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/liquidacoes?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018</a>
+                </p>
+
+                <div name="Parâmetros22" data-unique="Parâmetros22"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Liquidações temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>dtInicio(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data inicial para filtrar o período da liquidação. Formato(01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>dtFim(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data final para filtrar o período da liquidação. Formato(01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>numEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                        </tr>
+                        <tr>
+                            <td>numLiquidacao</td>
+                            <td>inteiro</td>
+                            <td>Número da Liquidação.</td>
+                        </tr>
+                        <tr>
+                            <td>descFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                        </tr>
+                        <tr>
+                            <td>descUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados23" data-unique="Retornodosdados23"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das liquidações que são:</p>
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumLiquidacao</td>
+                            <td>inteiro</td>
+                            <td>Número da Liquidação.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumUnidade</td>
+                            <td>inteiro</td>
+                            <td>Número da Unidade.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescDespesa</td>
+                            <td>string</td>
+                            <td>Nome da Despesa.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumDespesa</td>
+                            <td>string</td>
+                            <td>Número da Despesa.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumCpfCnpjFornecedor</td>
+                            <td>string</td>
+                            <td>Número do documento do Fornecedor.
+                                <br>Formatos: CPF (999.999.999-99), CNPJ (99.999.999/9999-99).</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DtLiquidacao</td>
+                            <td>data</td>
+                            <td>Data da Liquidação.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>VlLiquidacao</td>
+                            <td>decimal</td>
+                            <td>Valor da Liquidação.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>DescLiquidacao</td>
+                            <td>string</td>
+                            <td>Descrição da Liquidação.</td>
+                            <td>500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">Liquidacao</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumLiquidacao</span>&gt;</span>00004<span class="hljs-tag">&lt;/<span class="hljs-title">NumLiquidacao</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumEmpenho</span>&gt;</span>00004<span class="hljs-tag">&lt;/<span class="hljs-title">NumEmpenho</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescUnidade</span>&gt;</span>GABINETE DO PREFEITO<span class="hljs-tag">&lt;/<span class="hljs-title">DescUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumUnidade</span>&gt;</span>02001001<span class="hljs-tag">&lt;/<span class="hljs-title">NumUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescDespesa</span>&gt;</span>Diárias de Prefeito<span class="hljs-tag">&lt;/<span class="hljs-title">DescDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumDespesa</span>&gt;</span>3.3.90.14.03<span class="hljs-tag">&lt;/<span class="hljs-title">NumDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescFornecedor</span>&gt;</span>EDVALDO BAIAO ALBINO<span class="hljs-tag">&lt;/<span class="hljs-title">DescFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>371.875.116-04<span class="hljs-tag">&lt;/<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DtLiquidacao</span>&gt;</span>02/01/2018<span class="hljs-tag">&lt;/<span class="hljs-title">DtLiquidacao</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlLiquidado</span>&gt;</span>390.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlLiquidado</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescLiquidacao</span>&gt;</span>
+	PARCELA ALIMENTACAO E HOSPEDAGEM PARA SR PREFEITO IR A BELO HORIZONTE PARTICIPAR DE REUNIOES PARA TRATAR DE ASSUNTOS DO INTERESSE DO MUNICIPIO. RELATORIO NO 122827.
+	<span class="hljs-tag">&lt;/<span class="hljs-title">DescLiquidacao</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Liquidacao</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">NumLiquidacao</span>":<span class="hljs-value"><span class="hljs-string">"00004"</span></span>,
+	"<span class="hljs-attribute">NumEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"00004"</span></span>,
+	"<span class="hljs-attribute">DescUnidade</span>":<span class="hljs-value"><span class="hljs-string">"GABINETE DO PREFEITO"</span></span>,
+	"<span class="hljs-attribute">NumUnidade</span>":<span class="hljs-value"><span class="hljs-string">"02001001"</span></span>,
+	"<span class="hljs-attribute">DescDespesa</span>":<span class="hljs-value"><span class="hljs-string">"Diárias de Prefeito"</span></span>,
+	"<span class="hljs-attribute">NumDespesa</span>":<span class="hljs-value"><span class="hljs-string">"3.3.90.14.03"</span></span>,
+	"<span class="hljs-attribute">DescFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"EDVALDO BAIAO ALBINO"</span></span>,
+	"<span class="hljs-attribute">NumCpfCnpjFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"371.875.116-04"</span></span>,
+	"<span class="hljs-attribute">DtLiquidacao</span>":<span class="hljs-value"><span class="hljs-string">"02/01/2018"</span></span>,
+	"<span class="hljs-attribute">VlLiquidado</span>":<span class="hljs-value"><span class="hljs-string">"390.00"</span></span>,
+	"<span class="hljs-attribute">DescLiquidacao</span>":<span class="hljs-value"><span class="hljs-string">"PARCELA  ALIMENTACAO E HOSPEDAGEM PARA SR PREFEITO IR  A  BELO  HORIZONTE PARTICIPAR DE REUNIOES PARA TRATAR  DE  ASSUNTOS  DO  INTERESSE  DO MUNICIPIO. RELATORIO NO 122827."</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+                <div name="Pagamentos" data-unique="Pagamentos"></div>
+                <h2>Pagamentos</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/pagamentos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/api/pagamentos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018</a>
+                </p>
+
+                <div name="Parâmetros25" data-unique="Parâmetros25"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Pagamentos temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>dtInicio(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data inicial para filtrar o período do pagamento. Formato(01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>dtFim(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data final para filtrar o período do pagamento. Formato(01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>numEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                        </tr>
+                        <tr>
+                            <td>numPagamento</td>
+                            <td>inteiro</td>
+                            <td>Número do Pagamento.</td>
+                        </tr>
+                        <tr>
+                            <td>descFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                        </tr>
+                        <tr>
+                            <td>descUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados26" data-unique="Retornodosdados26"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das pagamentos que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumPagamento</td>
+                            <td>inteiro</td>
+                            <td>Número da Ordem de Pagamento.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumUnidade</td>
+                            <td>inteiro</td>
+                            <td>Número da Unidade.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescDespesa</td>
+                            <td>string</td>
+                            <td>Nome da Despesa.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumDespesa</td>
+                            <td>string</td>
+                            <td>Número da Despesa.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumCpfCnpjFornecedor</td>
+                            <td>string</td>
+                            <td>
+                                Número do documento do Fornecedor.
+                                <br> Formatos: CPF (999.999.999-99), CNPJ (99.999.999/9999-99).
+                            </td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DtPagamento</td>
+                            <td>data</td>
+                            <td>Data da Ordem de Pagamento.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>VlPagamento</td>
+                            <td>decimal</td>
+                            <td>Valor da Ordem de Pagamento.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>DescPagamento</td>
+                            <td>string</td>
+                            <td>Descrição da Ordem de Pagamento.</td>
+                            <td>500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">Pagamento</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumPagamento</span>&gt;</span>00498<span class="hljs-tag">&lt;/<span class="hljs-title">NumPagamento</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumEmpenho</span>&gt;</span>00498<span class="hljs-tag">&lt;/<span class="hljs-title">NumEmpenho</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescUnidade</span>&gt;</span>GABINETE DO PREFEITO<span class="hljs-tag">&lt;/<span class="hljs-title">DescUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumUnidade</span>&gt;</span>02001001<span class="hljs-tag">&lt;/<span class="hljs-title">NumUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescDespesa</span>&gt;</span>Diárias de demais servidores<span class="hljs-tag">&lt;/<span class="hljs-title">DescDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumDespesa</span>&gt;</span>3.3.90.14.05<span class="hljs-tag">&lt;/<span class="hljs-title">NumDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescFornecedor</span>&gt;</span>FRANCISCO MARINO DE AZEVEDO<span class="hljs-tag">&lt;/<span class="hljs-title">DescFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>045.027.366-00<span class="hljs-tag">&lt;/<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DtPagamento</span>&gt;</span>06/01/2018<span class="hljs-tag">&lt;/<span class="hljs-title">DtPagamento</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlPagamento</span>&gt;</span>1500.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlPagamento</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescPagamento</span>&gt;</span>
+	ADIANTAMENTO DE NUMERARIOS PARA COBRIR DESPESAS RE FERENTES A DIARIAS DE VIAGENS DE SERVIDOR PUBLICO A SERVICO DO MUNICIPIO CONFORME LEI MUNICIPAL 2613 E 170795, ALTERADAS PELAS LEIS 288599, 2926
+	<span class="hljs-tag">&lt;/<span class="hljs-title">DescPagamento</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Pagamento</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">NumPagamento</span>":<span class="hljs-value"><span class="hljs-string">"00498"</span></span>,
+	"<span class="hljs-attribute">NumEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"00498"</span></span>,
+	"<span class="hljs-attribute">DescUnidade</span>":<span class="hljs-value"><span class="hljs-string">"GABINETE DO PREFEITO"</span></span>,
+	"<span class="hljs-attribute">NumUnidade</span>":<span class="hljs-value"><span class="hljs-string">"02001001"</span></span>,
+	"<span class="hljs-attribute">DescDespesa</span>":<span class="hljs-value"><span class="hljs-string">"Diárias de demais servidores"</span></span>,
+	"<span class="hljs-attribute">NumDespesa</span>":<span class="hljs-value"><span class="hljs-string">"3.3.90.14.05"</span></span>,
+	"<span class="hljs-attribute">DescFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"FRANCISCO MARINO DE AZEVEDO"</span></span>,
+	"<span class="hljs-attribute">NumCpfCnpjFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"045.027.366-00"</span></span>,
+	"<span class="hljs-attribute">DtPagamento</span>":<span class="hljs-value"><span class="hljs-string">"06/01/2018"</span></span>,
+	"<span class="hljs-attribute">VlPagamento</span>":<span class="hljs-value"><span class="hljs-string">"1500.00"</span></span>,
+	"<span class="hljs-attribute">DescPagamento</span>":<span class="hljs-value"><span class="hljs-string">"ADIANTAMENTO DE NUMERARIOS PARA COBRIR DESPESAS RE FERENTES  A DIARIAS DE VIAGENS DE SERVIDOR PUBLICO A SERVICO DO MUNICIPIO CONFORME LEI MUNICIPAL 2613 E 170795, ALTERADAS PELAS LEIS 288599, 2926"</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+                <div name="ExtraOrçamentária" data-unique="ExtraOrçamentária"></div>
+                <h2>Extra Orçamentária</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/extraorcamentarias?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/extraorcamentarias?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;dtInicio=01/01/2018&amp;dtFim=31/12/2018</a>
+                </p>
+
+                <div name="Parâmetros28" data-unique="Parâmetros28"></div>
+                <h3>Parâmetros</h3>
+                Em Extra Orçamentária temos alguns outros filtros que também podem ser passados na URL que são:
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>dtInicio(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data inicial para filtrar o período de Extra Orçamentária. Formato(01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>dtFim(obrigatório)</td>
+                            <td>data</td>
+                            <td class="ng-binding">Data final para filtrar o período de Extra Orçamentária. Formato(01/01/2018).</td>
+                        </tr>
+                        <tr>
+                            <td>descFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                        </tr>
+                        <tr>
+                            <td>tpExtra</td>
+                            <td>string</td>
+                            <td>Tipo da Extra Orçamentária (P ou R).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados29" data-unique="Retornodosdados29"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados de Extra Orçamentária que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumOrdem</td>
+                            <td>string</td>
+                            <td>Número da Ordem.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumExtra</td>
+                            <td>string</td>
+                            <td>Número da Extra Orçamentária.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DtMovimento</td>
+                            <td>data</td>
+                            <td>Data do Movimento.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>DescConta</td>
+                            <td>string</td>
+                            <td>Descrição da conta.</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>DescFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>TpExtra</td>
+                            <td>string</td>
+                            <td>Tipo da Extra Orçamentária (P ou R).</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>VlExtra</td>
+                            <td>decimal</td>
+                            <td>Valor da Extra Orçamentária.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">Extra</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumOrdem</span>&gt;</span>2018009666001<span class="hljs-tag">&lt;/<span class="hljs-title">NumOrdem</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumExtra</span>&gt;</span>0202000010001<span class="hljs-tag">&lt;/<span class="hljs-title">NumExtra</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DtMovimento</span>&gt;</span>19/05/2018<span class="hljs-tag">&lt;/<span class="hljs-title">DtMovimento</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescConta</span>&gt;</span>INSS - PRODUTOR RURAL<span class="hljs-tag">&lt;/<span class="hljs-title">DescConta</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescFornecedor</span>&gt;</span>FERNANDO DE ALMEIDA<span class="hljs-tag">&lt;/<span class="hljs-title">DescFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">TpExtra</span>&gt;</span>P<span class="hljs-tag">&lt;/<span class="hljs-title">Tipo</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlExtra</span>&gt;</span>1.01<span class="hljs-tag">&lt;/<span class="hljs-title">Valor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Extra</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+	"<span class="hljs-attribute">NumOrdem</span>":<span class="hljs-value"><span class="hljs-string">"2018009666001"</span></span>,
+	"<span class="hljs-attribute">NumExtra</span>":<span class="hljs-value"><span class="hljs-string">"0202000010001"</span></span>,
+	"<span class="hljs-attribute">DtMovimento</span>":<span class="hljs-value"><span class="hljs-string">"19/05/2018"</span></span>,
+	"<span class="hljs-attribute">DescConta</span>":<span class="hljs-value"><span class="hljs-string">"INSS - PRODUTOR RURAL"</span></span>,
+	"<span class="hljs-attribute">DescFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"FERNANDO DE ALMEIDA"</span></span>,
+	"<span class="hljs-attribute">TpExtra</span>":<span class="hljs-value"><span class="hljs-string">"P"</span></span>,
+	"<span class="hljs-attribute">VlExtra</span>":<span class="hljs-value"><span class="hljs-string">"1.01"</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+                <div name="RestosaPagar" data-unique="RestosaPagar"></div>
+                <h2>Restos a Pagar</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/restos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2017"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/restos?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100&amp;numano=2017</a>
+                </p>
+
+                <div name="Parâmetros31" data-unique="Parâmetros31"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Restos a Pagar temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>numAno(obrigatório)</td>
+                            <td>inteiro</td>
+                            <td>Ano da receita.</td>
+                        </tr>
+                        <tr>
+                            <td>numEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                        </tr>
+                        <tr>
+                            <td>descFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                        </tr>
+                        <tr>
+                            <td>descUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                        </tr>
+                        <tr>
+                            <td>tpEmpenho</td>
+                            <td>string</td>
+                            <td>Tipo do Empenho.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados32" data-unique="Retornodosdados32"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados dos restos a pagar que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumEmpenho</td>
+                            <td>inteiro</td>
+                            <td>Número do Empenho.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>TpEmpenho</td>
+                            <td>string</td>
+                            <td>Tipo do Empenho.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DtEmpenho</td>
+                            <td>data</td>
+                            <td>Data do Empenho.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>VlEmpenho</td>
+                            <td>decimal</td>
+                            <td>Valor do Empenho.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>NumDespesa</td>
+                            <td>string</td>
+                            <td>Número da Despesa.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DescDespesa</td>
+                            <td>string</td>
+                            <td>Descrição da Despesa.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumCpfCnpjFornecedor</td>
+                            <td>string</td>
+                            <td>Número do documento do Fornecedor. Formatos: CPF (999.999.999-99), CNPJ (99.999.999/9999-99).</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescFornecedor</td>
+                            <td>string</td>
+                            <td>Nome do Fornecedor.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NumUnidade</td>
+                            <td>inteiro</td>
+                            <td>Número da Unidade.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescUnidade</td>
+                            <td>string</td>
+                            <td>Nome da Unidade.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>VlInscrito</td>
+                            <td>decimal</td>
+                            <td>Valor Inscrito.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlPago</td>
+                            <td>decimal</td>
+                            <td>Valor Pago.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>VlCancelado</td>
+                            <td>decimal</td>
+                            <td>Valor Cancelado.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                <code class="xml ng-binding hljs">  
+<span class="hljs-tag">&lt;<span class="hljs-title">RestoPagar</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumEmpenho</span>&gt;</span>00012<span class="hljs-tag">&lt;/<span class="hljs-title">NumEmpenho</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">TpEmpenho</span>&gt;</span>ESTIMATIVO<span class="hljs-tag">&lt;/<span class="hljs-title">TpEmpenho</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DtEmpenho</span>&gt;</span>02/01/2017<span class="hljs-tag">&lt;/<span class="hljs-title">DtEmpenho</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlEmpenho</span>&gt;</span>8000.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlEmpenho</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumDespesa</span>&gt;</span>3.3.90.30.04<span class="hljs-tag">&lt;/<span class="hljs-title">NumDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescDespesa</span>&gt;</span>Gás Engarrafado<span class="hljs-tag">&lt;/<span class="hljs-title">DescDespesa</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>71.441.661/0001-09<span class="hljs-tag">&lt;/<span class="hljs-title">NumCpfCnpjFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescFornecedor</span>&gt;</span>E.C.NASCIMENTO &amp; CIA. LTDA.<span class="hljs-tag">&lt;/<span class="hljs-title">DescFornecedor</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">NumUnidade</span>&gt;</span>02002002<span class="hljs-tag">&lt;/<span class="hljs-title">NumUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">DescUnidade</span>&gt;</span>DIVISAO DE PATRIMONIO E ADMINISTRACAO DE MATERIAIS<span class="hljs-tag">&lt;/<span class="hljs-title">DescUnidade</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlInscrito</span>&gt;</span>400.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlrInscrito</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlPago</span>&gt;</span>400.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlrPago</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">VlCancelado</span>&gt;</span>0.00<span class="hljs-tag">&lt;/<span class="hljs-title">VlrCancelado</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">RestoPagar</span>&gt;</span>
+              </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                <code class="json ng-binding hljs">
+{  
+   "<span class="hljs-attribute">NumEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"00012"</span></span>,
+   "<span class="hljs-attribute">TpEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"ESTIMATIVO"</span></span>,
+   "<span class="hljs-attribute">DtEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"02/01/2017"</span></span>,
+   "<span class="hljs-attribute">VlEmpenho</span>":<span class="hljs-value"><span class="hljs-string">"8000.00"</span></span>,
+   "<span class="hljs-attribute">NumDespesa</span>":<span class="hljs-value"><span class="hljs-string">"3.3.90.30.04"</span></span>,
+   "<span class="hljs-attribute">DescDespesa</span>":<span class="hljs-value"><span class="hljs-string">"Gás Engarrafado"</span></span>,
+   "<span class="hljs-attribute">NumCpfCnpjFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"71.441.661/0001-09"</span></span>,
+   "<span class="hljs-attribute">DescFornecedor</span>":<span class="hljs-value"><span class="hljs-string">"E.C.NASCIMENTO &amp; CIA. LTDA."</span></span>,
+   "<span class="hljs-attribute">NumUnidade</span>":<span class="hljs-value"><span class="hljs-string">"02002002"</span></span>,
+   "<span class="hljs-attribute">DescUnidade</span>":<span class="hljs-value"><span class="hljs-string">"DIVISAO DE PATRIMONIO E ADMINISTRACAO DE MATERIAIS"</span></span>,
+   "<span class="hljs-attribute">VlInscrito</span>":<span class="hljs-value"><span class="hljs-string">"400.00"</span></span>,
+   "<span class="hljs-attribute">VlPago</span>":<span class="hljs-value"><span class="hljs-string">"400.00"</span></span>,
+   "<span class="hljs-attribute">VlCancelado</span>":<span class="hljs-value"><span class="hljs-string">"0.00"</span>
+</span>}
+                </code>
+             </pre>
+                <br>
+
+
+
+
+
+
+
+
+
+
+                <div name="Licitações" data-unique="Licitações"></div>
+                <h2>Licitações</h2>
+                <p>Exemplo:</p>
+                <p>
+                    <a data-toggle="tooltip" data-placement="right" target="_blank" href="http://transparencia.portalfacil.com.br/api/licitacoes?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100"
+                        class="ng-binding" data-original-title="Clique para ver o exemplo">http://transparencia.portalfacil.com.br/api/licitacoes?type=json&amp;idCliente=210&amp;page=1&amp;pageSize=100</a>
+                </p>
+                <div name="Parâmetros34" data-unique="Parâmetros34"></div>
+                <h3>Parâmetros</h3>
+                <p>
+                    Em Licitações temos alguns outros filtros que também podem ser passados na URL que são:
+                </p>
+
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                        </tr>
+                        <tr>
+                            <td>numLicitacao</td>
+                            <td>inteiro</td>
+                            <td>Número da licitação.</td>
+                        </tr>
+                        <tr>
+                            <td>numAno</td>
+                            <td>inteiro</td>
+                            <td>Número do ano da licitação.</td>
+                        </tr>
+                        <tr>
+                            <td>descModalidade</td>
+                            <td>string</td>
+                            <td>Descrição da modalidade de licitação.</td>
+                        </tr>
+                        <tr>
+                            <td>descUnidade</td>
+                            <td>string</td>
+                            <td>Descrição da unidade de licitação.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div name="Retornodosdados35" data-unique="Retornodosdados35"></div>
+                <h3>Retorno dos dados</h3>
+                <p>Após acessarmos temos o retorno dos dados das licitações que são:</p>
+
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Tamanho</th>
+                        </tr>
+                        <tr>
+                            <td>NumLicitacao</td>
+                            <td>inteiro</td>
+                            <td>Número da licitação.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumAno</td>
+                            <td>inteiro</td>
+                            <td>Número do ano da licitação.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NmUnidade</td>
+                            <td>string</td>
+                            <td>Nome da unidade da licitação.</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>NmLicitacaoModalidade</td>
+                            <td>string</td>
+                            <td>Nome da modalidade de licitação.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>NumProcessoAdm</td>
+                            <td>string</td>
+                            <td>Número do processo administrativo.</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>DtPublicacao</td>
+                            <td>data</td>
+                            <td>Data da publicação da licitação.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>DtHabilitacao</td>
+                            <td>data</td>
+                            <td>Data de habilitação da licitação.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>HrHabilitacao</td>
+                            <td>string</td>
+                            <td>Horário de habilitação da licitação.</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>DtLimite</td>
+                            <td>data</td>
+                            <td>Data limite da licitação.</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>DmStatus</td>
+                            <td>string</td>
+                            <td>Descrição do status da licitação.</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>DescObjeto</td>
+                            <td>string</td>
+                            <td>Descrição do objeto da licitação.</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>NuValorEstimado</td>
+                            <td>decimal</td>
+                            <td>Valor estimado da licitação.</td>
+                            <td>(18,2)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Categorias da licitação</strong>
+                            </td>
+                            <td>lista</td>
+                            <td>
+                                <table class="table table-striped table-bordered table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Tipo</th>
+                                            <th>Descrição</th>
+                                            <th>Tamanho</th>
+                                        </tr>
+                                        <tr>
+                                            <td>NmLicitacaoCategoria</td>
+                                            <td>string</td>
+                                            <td>Nome da Categoria.</td>
+                                            <td>50</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                Obs.: Dados inexistentes aparecem como vazio ou 0.
+                <br>
+                <br> Exemplo dos dados em:
+                <br>
+                <br>
+                <span class="note">
+                    <strong>XML</strong>
+                </span>
+                <pre>                    <code class="xml ng-binding hljs">
+                        <span class="hljs-tag">&lt;<span class="hljs-title">Licitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumLicitacao</span>&gt;</span>190<span class="hljs-tag">&lt;/<span class="hljs-title">NumLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumAno</span>&gt;</span>2017<span class="hljs-tag">&lt;/<span class="hljs-title">NumAno</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NmUnidade</span>&gt;</span>Divisão de Compras e Licitações<span class="hljs-tag">&lt;/<span class="hljs-title">NmUnidade</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NmLicitacaoModalidade</span>&gt;</span>Pregão Eletrônico<span class="hljs-tag">&lt;/<span class="hljs-title">NmLicitacaoModalidade</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NumProcessoAdm</span>&gt;</span>150<span class="hljs-tag">&lt;/<span class="hljs-title">NumProcessoAdm</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DtPublicacao</span>&gt;</span>29/11/2017<span class="hljs-tag">&lt;/<span class="hljs-title">DtPublicacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DtHabilitacao</span>&gt;</span>13/12/2017<span class="hljs-tag">&lt;/<span class="hljs-title">DtHabilitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">HrHabilitacao</span>&gt;</span>08:00<span class="hljs-tag">&lt;/<span class="hljs-title">HrHabilitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DtLimite</span>&gt;</span>13/12/2017<span class="hljs-tag">&lt;/<span class="hljs-title">DtLimite</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DmStatus</span>&gt;</span>Homologada<span class="hljs-tag">&lt;/<span class="hljs-title">DmStatus</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">DescObjeto</span>&gt;</span>
+                        Aquisição de materiais permanentes destinados a abertura e funcionamento de Abrigo para adolescente de 12 à 18 anos.
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">DescObjeto</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NuValorEstimado</span>&gt;</span>529430.97<span class="hljs-tag">&lt;/<span class="hljs-title">NuValorEstimado</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">Categorias</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">CategoriaLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NmLicitacaoCategoria</span>&gt;</span>Equipamentos e suprimentos de informatica<span class="hljs-tag">&lt;/<span class="hljs-title">NmLicitacaoCategoria</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">CategoriaLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">CategoriaLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">NmLicitacaoCategoria</span>&gt;</span>Mobiliário<span class="hljs-tag">&lt;/<span class="hljs-title">NmLicitacaoCategoria</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">CategoriaLicitacao</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">Categorias</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">Licitacao</span>&gt;</span>
+                    </code>
+             </pre>
+                <br>
+                <span class="note">
+                    <strong>JSON</strong>
+                </span>
+                <pre>                    <code class="json ng-binding hljs">
+                        [
+                        {
+                        "<span class="hljs-attribute">NumLicitacao</span>":<span class="hljs-value"><span class="hljs-string">"190"</span></span>,
+                        "<span class="hljs-attribute">NumAno</span>":<span class="hljs-value"><span class="hljs-string">"2017"</span></span>,
+                        "<span class="hljs-attribute">NmUnidade</span>":<span class="hljs-value"><span class="hljs-string">"Divisão de Compras e Licitações"</span></span>,
+                        "<span class="hljs-attribute">NmLicitacaoModalidade</span>":<span class="hljs-value"><span class="hljs-string">"Pregão Eletrônico"</span></span>,
+                        "<span class="hljs-attribute">NumProcessoAdm</span>":<span class="hljs-value"><span class="hljs-string">"150"</span></span>,
+                        "<span class="hljs-attribute">DtPublicacao</span>":<span class="hljs-value"><span class="hljs-string">"29/11/2017"</span></span>,
+                        "<span class="hljs-attribute">DtHabilitacao</span>":<span class="hljs-value"><span class="hljs-string">"13/12/2017"</span></span>,
+                        "<span class="hljs-attribute">HrHabilitacao</span>":<span class="hljs-value"><span class="hljs-string">"08:00"</span></span>,
+                        "<span class="hljs-attribute">DtLimite</span>":<span class="hljs-value"><span class="hljs-string">"13/12/2017"</span></span>,
+                        "<span class="hljs-attribute">DmStatus</span>":<span class="hljs-value"><span class="hljs-string">"Homologada"</span></span>,
+                        "<span class="hljs-attribute">DescObjeto</span>":<span class="hljs-value"><span class="hljs-string">"Aquisição de materiais permanentes destinados a abertura e funcionamento de Abrigo para adolescente de 12 à 18 anos."</span></span>,
+                        "<span class="hljs-attribute">NuValorEstimado</span>":<span class="hljs-value"><span class="hljs-string">"529430.97"</span></span>,
+                        "<span class="hljs-attribute">Categorias</span>":<span class="hljs-value">[
+                        {
+                        "<span class="hljs-attribute">NmLicitacaoCategoria</span>":<span class="hljs-value"><span class="hljs-string">"Equipamentos e suprimentos de informatica"</span>
+                        </span>},
+                        {
+                        "<span class="hljs-attribute">NmLicitacaoCategoria</span>":<span class="hljs-value"><span class="hljs-string">"Mobiliário"</span>
+                        </span>}
+                        ]
+                        </span>}
+                        ]
+                    </code>
+             </pre>
+                <br>
+
+
+
+
+
+
+
+
+
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+
+    </div>
+    <!--/.fluid-container-->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="api_arquivos/jquery-1.js"></script>
+    <script src="api_arquivos/jquery-ui-1.js"></script>
+    <script src="api_arquivos/jquery.js"></script>
+    <script src="api_arquivos/highlight_002.js"></script>
+    <script src="api_arquivos/highlight.js"></script>
+    <script src="api_arquivos/bootstrap.js"></script>
+    <script src="api_arquivos/angular.js"></script>
+    <script src="api_arquivos/app.js"></script>
+    <script src="api_arquivos/geral.js"></script>
+
+    <div class="tocify-extend-page" style="height: 21853px;" data-unique="tocify-extend-page"></div>
+</body>
+
+</html>
